@@ -1,2 +1,2 @@
 # argoteam-dcapi
-Argoteam's repository for dive club evaluations and database REST API.
+Argoteam's repository for dive center evaluations and database REST API.
