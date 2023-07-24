@@ -1,2 +1,2 @@
-# argoteam-dcapi
-Argoteam's repository for dive center evaluations and database REST API.
+# argoteam-dice-api
+Argoteam's repository for DIve CEnter evaluations and database REST API.
