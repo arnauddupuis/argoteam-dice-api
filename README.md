@@ -27,6 +27,12 @@ Account {
 	string last_name
 }
 
+Role {
+    int id PK
+    int user_id FK "User.id"
+    string role "Can be: platform_manager, admin, user"
+}
+
 Agency {
 	int id PK
 	string name
@@ -102,6 +108,7 @@ EvaluationCardAnswer {
 
 User ||--|| Account : has
 User ||--o{ DiverCertification : has
+Role ||--|{ User : has
 DiverCertification ||--|| Certification : is
 Certification }|--|| Agency : "delivered by"
 DiveCenterAgencyAffiliation }|--|| DiveCenter : has
@@ -111,7 +118,7 @@ DiveCenter ||--o{ Evaluation : has
 Evaluation ||--|{ EvaluationCard : contains
 EvaluationCard ||--|{ EvaluationCardQuestion : contains
 EvaluationCard ||--|{ EvaluationCardAnswer : contains
-EvaluationCardQuestion o|--|{ EvaluationCardAnswer : contains
+EvaluationCardQuestion o|--|| EvaluationCardAnswer : contains
 
 ```
 
